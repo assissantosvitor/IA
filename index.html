@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Profissional - Portfolio</title>
+    <title>Cadastro Master - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,58 +23,69 @@
     </div>
 
     <div class="container">
-        <form id="form-cadastro">
+        <div class="form-section">
             <h2>Registro de Usuário</h2>
-            <p>Por favor, preencha todos os campos cuidadosamente.</p>
+            <p>Complete todos os campos para a base de dados.</p>
 
-            <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" required>
-            </div>
-
-            <div class="row">
+            <form id="form-cadastro">
                 <div class="input-group">
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required>
                 </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" id="nascimento" required>
+                    </div>
+                </div>
+
                 <div class="input-group">
-                    <label for="nascimento">Data de Nascimento</label>
-                    <input type="date" id="nascimento" required>
+                    <label for="email">E-mail Profissional</label>
+                    <input type="email" id="email" required>
                 </div>
-            </div>
 
-            <div class="input-group">
-                <label for="email">E-mail Profissional</label>
-                <input type="email" id="email" required>
-            </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="genero">Identidade / Gênero</label>
+                        <select id="genero" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="Trans">Transgênero</option>
+                            <option value="Neutro">Gênero Neutro</option>
+                            <option value="Homossexual">Homossexual</option>
+                            <option value="Therian">Therian</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
 
-            <div class="row">
                 <div class="input-group">
-                    <label for="genero">Identidade / Gênero</label>
-                    <select id="genero" required>
-                        <option value="" disabled selected>Selecione...</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Feminino</option>
-                        <option value="Trans">Transgênero</option>
-                        <option value="Neutro">Gênero Neutro</option>
-                        <option value="Homossexual">Homossexual</option>
-                        <option value="Therian">Therian</option>
-                        <option value="Outro">Outro</option>
-                    </select>
+                    <label for="endereco">Endereço Completo</label>
+                    <input type="text" id="endereco" placeholder="Rua, Número, Bairro...">
                 </div>
-                <div class="input-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
-                </div>
-            </div>
 
-            <div class="input-group">
-                <label for="endereco">Endereço Completo</label>
-                <input type="text" id="endereco" placeholder="Rua, Número, Bairro...">
-            </div>
+                <button type="submit">Finalizar Registro</button>
+            </form>
+        </div>
 
-            <button type="submit">Finalizar Registro</button>
-        </form>
+        <div class="social-section">
+            <div class="social-content">
+                <i class="fab fa-instagram"></i>
+                <h3>Siga-me</h3>
+                <p>Veja mais projetos no meu perfil oficial.</p>
+                <a href="https://instagram.com/SEU_USUARIO" target="_blank" class="insta-btn">@seu_perfil</a>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
