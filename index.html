@@ -36,5 +36,32 @@
             <button type="submit">Cadastrar Cliente</button>
         </form>
     </div>
-</body>
+</body>document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+    // Impede o formulário de recarregar a página
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const cpf = document.getElementById('cpf').value;
+
+    // Validação simples de E-mail usando Regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+        alert("Por favor, insira um e-mail válido.");
+        return;
+    }
+
+    // Validação de CPF (apenas tamanho para este exemplo simples)
+    if (cpf.length < 11) {
+        alert("O CPF deve conter pelo menos 11 dígitos.");
+        return;
+    }
+
+    // Se tudo estiver correto:
+    alert("Dados processados com sucesso! Cadastro realizado.");
+    
+    // Opcional: Limpar o formulário após o sucesso
+    this.reset();
+});
 </html>
