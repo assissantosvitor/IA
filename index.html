@@ -44,15 +44,19 @@
                 <input type="email" id="email" required>
             </div>
 
-            <div class="row">
-                <div class="input-group">
-                    <label for="genero">Gênero</label>
-                    <select id="genero">
-                        <option value="">Selecione...</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Feminino</option>
-                        <option value="O">Outro</option>
-                    </select>
+            <div class="input-group">
+    <label for="genero">Identidade / Gênero</label>
+    <select id="genero" required>
+        <option value="" disabled selected>Selecione uma opção...</option>
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+        <option value="Trans">Transgênero</option>
+        <option value="Neutro">Gênero Neutro / Não-Binário</option>
+        <option value="Homossexual">Homossexual</option>
+        <option value="Therian">Therian</option>
+        <option value="Outro">Outro</option>
+    </select>
+</div>
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
