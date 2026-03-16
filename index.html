@@ -10,6 +10,9 @@
     <div class="sala">
         <div class="parede"></div>
         <div class="chao"></div>
+        <div class="luminaria"></div>
+        <div class="luz-cone"></div>
+        
         <div class="poltrona">
             <div class="encosto"></div>
             <div class="assento"></div>
@@ -20,8 +23,8 @@
 
     <div class="container">
         <form id="form-cadastro">
-            <h2>Cadastro de Cliente</h2>
-            <p>Insira as informações detalhadas do novo registro.</p>
+            <h2>Registro de Usuário</h2>
+            <p>Por favor, preencha todos os campos cuidadosamente.</p>
 
             <div class="input-group">
                 <label for="nome">Nome Completo</label>
@@ -31,7 +34,7 @@
             <div class="row">
                 <div class="input-group">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
                 </div>
                 <div class="input-group">
                     <label for="nascimento">Data de Nascimento</label>
@@ -44,23 +47,23 @@
                 <input type="email" id="email" required>
             </div>
 
-            <div class="input-group">
-    <label for="genero">Identidade / Gênero</label>
-    <select id="genero" required>
-        <option value="" disabled selected>Selecione uma opção...</option>
-        <option value="M">Masculino</option>
-        <option value="F">Feminino</option>
-        <option value="Trans">Transgênero</option>
-        <option value="Neutro">Gênero Neutro / Não-Binário</option>
-        <option value="Homossexual">Homossexual</option>
-        <option value="Therian">Therian</option>
-        <option value="Outro">Outro</option>
-    </select>
-</div>
+            <div class="row">
+                <div class="input-group">
+                    <label for="genero">Identidade / Gênero</label>
+                    <select id="genero" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="Trans">Transgênero</option>
+                        <option value="Neutro">Gênero Neutro</option>
+                        <option value="Homossexual">Homossexual</option>
+                        <option value="Therian">Therian</option>
+                        <option value="Outro">Outro</option>
+                    </select>
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone">
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
                 </div>
             </div>
 
